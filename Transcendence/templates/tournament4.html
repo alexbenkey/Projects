@@ -1,0 +1,59 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tournament.css' %}">
+</head>
+<body>
+
+        <div id="tournamentBracket4" class="bracket-container4" style="display: none;">    
+            <!-- First Column: 4 Matches -->
+            <div id="tourn4Match_1" class="Match_1">
+                <div class="Object_1">
+                    <div class="player">
+                        <span class="Name" id="Player1_" data-player-id="1">{% trans "Waiting..." %}</span>
+                        <span class="Result" id="Result1_">  </span>
+                    </div>
+                    <div class="player">
+                        <span class="Name" id="Player2_" data-player-id="2">{% trans "Waiting..." %} </span>
+                        <span class="Result" id="Result2_">  </span>
+                    </div>
+                </div>
+            </div>
+            <div id="tourn4Match_2" class="Match_2">
+                <div class="Object_1">
+                    <div class="player">
+                        <span class="Name" id="Player3_" data-player-id="3">{% trans "Waiting..." %} </span>
+                        <span class="Result" id="Result3_">  </span>
+                    </div>
+                    <div class="player">
+                        <span class="Name" id="Player4_" data-player-id="4">{% trans "Waiting..." %} </span>
+                        <span class="Result" id="Result4_">  </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Column: 1 Match -->
+            <div id="tourn4Match_3" class="Match_3">
+                <div class="Object_3">
+                    <div class="player">
+                        <span class="Name" id="Player13_" data-player-id="13">{% trans "Waiting..." %} </span>
+                        <span class="Result" id="Result13_">  </span>
+                    </div>
+                    <div class="player">
+                        <span class="Name" id="Player14_" data-player-id="14">{% trans "Waiting..." %} </span>
+                        <span class="Result" id="Result14_">  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    {% comment %} <script src="{% static 'js/tournament.js' %}"></script> {% endcomment %}
+</body>
+</html>

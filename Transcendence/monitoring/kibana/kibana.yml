@@ -1,0 +1,38 @@
+server.name: kibana
+server.port: 5601
+server.host: "0.0.0.0"
+
+# server.ssl.enabled: true
+# server.ssl.certificate: /etc/kibana/ssl/localhost_cert.crt
+# server.ssl.key: /etc/kibana/ssl/localhost_key.pem
+
+server.ssl.enabled: true
+server.ssl.certificate: /certs/kibana.crt
+server.ssl.key: /certs/kibana.key
+server.ssl.certificateAuthorities: [ "/certs/ca.crt" ]
+xpack.security.encryptionKey: bananatimebananatimebananametime
+#xpack.encryptedSavedObjects.encryptionKey: 
+
+
+elasticsearch.hosts: [ https://elasticsearch:9200 ]
+# elasticsearch.username: elastic
+# elasticsearch.password: ${ELASTIC_PASSWORD}
+
+#elasticsearch.username: "kibana_system"
+#elasticsearch.password: "$ELASTIC_PASSWORD"
+
+
+#xpack.security.encryptionKey: "/usr/share/kibana/config/cert/kibana_key.pem"
+
+
+
+# Elasticsearch Connection
+
+# SSL settings
+# xpack.security.encryptionKey: keyzz
+# xpack.encryptedSavedObjects.encryptionKey: keys
+# xpack.reporting.encryptionKey: keys
+
+## X-Pack security credentials
+elasticsearch.serviceAccountToken: "${KIBANA_SERVICE_ACCOUNT_TOKEN}"
+elasticsearch.ssl.certificateAuthorities: [ "/certs/ca.crt" ]
